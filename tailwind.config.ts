@@ -1,14 +1,13 @@
-
 import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,68 +18,38 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        cormorant: ['Cormorant', 'serif'],
-        sourcesans: ['"Source Sans Pro"', 'sans-serif'],
-      },
       colors: {
         wine: {
-          100: "#F8EBE8",
-          200: "#E5D3D2",
-          300: "#C9A2A1",
-          400: "#A85F60",
-          500: "#7D2E38", // Основной винный цвет
-          600: "#6A2B2B",
-          700: "#551C25",
-          800: "#40161D",
-          900: "#2E1114",
+          50: "#f9e6e8",
+          100: "#f3cdd1",
+          200: "#e79a9f",
+          300: "#da676d",
+          400: "#ce353c",
+          500: "#c12029",
+          600: "#9a1a21",
+          700: "#7d2e38",
+          800: "#5c1b22",
+          900: "#3b1419",
+          950: "#1f0a0d",
         },
         gold: {
-          100: "#F9F4E5",
-          200: "#F2E7C7",
-          300: "#E7D4A3",
-          400: "#DEB964", // Основной золотой
-          500: "#C7963E",
-          600: "#A67B2E",
-          700: "#7A5B25",
-          800: "#5E4420",
-          900: "#3A2D1A",
+          50: "#fbf8e5",
+          100: "#f7f1cc",
+          200: "#eee299",
+          300: "#e6d466",
+          400: "#ddc533",
+          500: "#d4b62b",
+          600: "#a99222",
+          700: "#7e6d19",
+          800: "#544911",
+          900: "#2a2408",
+          950: "#151204",
         },
         cream: "#F8F3E3",
-        dark: "#221F26",
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+      },
+      fontFamily: {
+        cormorant: ["Cormorant", "serif"],
+        sourcesans: ["Source Sans Pro", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -98,7 +67,7 @@ const config = {
         },
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" }
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
@@ -108,7 +77,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
 
 export default config;
